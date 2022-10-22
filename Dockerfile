@@ -11,4 +11,4 @@ RUN chmod +x /opt/bin/minio
 
 VOLUME ["/data"]
 
-CMD ["minio", "server", "/data"]
+CMD ["minio", "server", "/data", "--address", ":3005", "--console-address", ":3006"]
