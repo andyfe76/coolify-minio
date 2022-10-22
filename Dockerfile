@@ -2,7 +2,7 @@ FROM minio/minio:latest
 
 ENV PATH=/opt/bin:$PATH
 
-RUN apt-get install wget
+RUN apt-get update && apt-get install wget
 RUN wget https://dl.min.io/server/minio/release/linux-amd64/minio -O /opt/bin/minio
 RUN chmod +x /opt/bin/minio/minio
 
