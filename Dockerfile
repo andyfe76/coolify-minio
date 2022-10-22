@@ -2,7 +2,7 @@ FROM minio/minio:latest
 
 ENV PATH=/opt/bin:$PATH
 
-RUN apt update
+RUN apk add --no-cache wget
 RUN wget https://dl.min.io/server/minio/release/linux-amd64/minio -O /opt/bin/minio
 RUN chmod +x /opt/bin/minio/minio
 
